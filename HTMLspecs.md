@@ -40,7 +40,7 @@
 
 # purchase
 ```
-    return <div>ShowTime
+return <div>ShowTime
         <br/>
         Movieinfo<br/>
          {movie.title} <br/>{movie.description} <br/><a href={`/movie/${movie.id}`}>Movie link</a>
@@ -52,8 +52,8 @@
         <hr/>
 
         buy tickets:<br/>
-
-        number: <input id="amt" type="number" onChange={calcCost}/><br/>
+    <form>
+        number: <input id="amt" type="number" min="1" onChange={calcCost}/><br/>
         
         apply discount 
         <select id="discount" onChange={calcCost}>
@@ -69,6 +69,7 @@
 
         $<p id="cost"></p>
 
-        <button>check out</button>
+        <button onClick={(e)=>{purchase(e)}}>check out</button>
+        </form>
     </div>
 ```
