@@ -3,7 +3,7 @@
 * ana can add finished html/css underneath ?
 
 
-forgotpw
+# forgotpw
 ```
 <div>
     <div id="recAcc">
@@ -23,5 +23,17 @@ forgotpw
             fail: secfail text = Security check failed */}
         <div id="secFail"></div>
     </div>
+</div>
+```
+# reset pw
+```
+<div>
+    {email} <br/>
+    <input id="newpw"/><br/>
+    <input id="newpw2"/><br/>
+    <button onClick={(e)=>resetPw(e)}>Reset password</button>
+    {/* success: update user table, resetResult text = Reset successful
+        fail: secfail text = New passwords don't match */}
+    <div id="resetResult"></div>
 </div>
 ```
