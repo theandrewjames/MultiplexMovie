@@ -6,8 +6,22 @@
 forgotpw
 ```
 <div>
-    {secQ}
-    <input id="secA"/>
-    <button onClick={(e) => {checkSecQ(e)}}>confirm security question</button>
+    <div id="recAcc">
+        Forgot password but remember your email? recover your account:
+        <input id="recEmail"/>
+        <button onClick={(e)=>findAcc(e)}>recover acc</button>
+        {/* success: hide recAcc, unhide secCheck (class hidden)
+            fail: emNotFound text = No account has been registered with that email */}
+        <div id="emNotFound"></div>
+    </div>
+
+    <div id="secCheck" class = "hidden">
+        {secQ /*laoded from user table*/}
+        <input id="secA"/>
+        <button onClick={(e) => {checkSecQ(e)}}>confirm security question</button>
+        {/* success: redirect to reset path
+            fail: secfail text = Security check failed */}
+        <div id="secFail"></div>
+    </div>
 </div>
 ```
