@@ -37,3 +37,38 @@
     <div id="resetResult"></div>
 </div>
 ```
+
+# purchase
+```
+    return <div>ShowTime
+        <br/>
+        Movieinfo<br/>
+         {movie.title} <br/>{movie.description} <br/><a href={`/movie/${movie.id}`}>Movie link</a>
+        <hr/>
+        Showtime info<br/> {showtime.time}<br/>
+
+        {showtime.seats} seats left <br/>
+        ${showtime.price} per ticket <br/>
+        <hr/>
+
+        buy tickets:<br/>
+
+        number: <input id="amt" type="number" onChange={calcCost}/><br/>
+        
+        apply discount 
+        <select id="discount" onChange={calcCost}>
+            <option key ="-1" value="0">None</option>
+            {discounts.map((ele)=><option key={ele.id} value={ele.amount}>discount{ele.text}</option>)}
+        </select> <br/>
+
+        apply offer
+        <select id="offer" onChange={calcCost}>
+            <option key ="-1" value="0">None</option>
+            {offers.map((ele)=><option key={ele.id} value={ele.amount}>offer{ele.text}</option>)}
+        </select> <br/>
+
+        $<p id="cost"></p>
+
+        <button>check out</button>
+    </div>
+```
