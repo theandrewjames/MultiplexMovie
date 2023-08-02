@@ -125,3 +125,12 @@
     </div>
 
 ```
+# add multiplex
+```
+    return <div>
+        Add Multiplex<br/>
+        name <input id="name"/> <br/>
+        address <input id="addr"/> <br/>
+        <button onClick={(e)=>add(e)}>Add</button>
+    </div>
+```
