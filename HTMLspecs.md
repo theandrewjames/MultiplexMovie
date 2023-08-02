@@ -99,5 +99,29 @@
 
 # multiplexes
 ```
+    return <div>
+        Multiplexes
+        <button onClick={addMultiplex}>add new multiplex</button>
+        {/* newMultiplex becomes AddMultiplex component */}
+
+        {myMultiplexes.map(
+            (mult)=><div key={mult.id} >
+                <div>{mult.name}</div>
+
+                {getShowTimes(mult.id).map((st)=> <a href={`/showtime/${st.id}`}>{st.time} {st.title}</a>)}
+                <br/>
+                
+                <button onClick={()=>addShowTime(mult.id)}>add showtime</button>
+                {/* newShowTime becomes NewShowComponent */}
+
+        </div>
+        )}
+        
+        {/* starts as an empty div */}
+        {newMultiplex}
+
+        {/* starts as an empty div */}
+        {newShowTime}
+    </div>
 
 ```
