@@ -42,10 +42,14 @@
 
 # purchase
 ```
-return <div>ShowTime
+    return <div>ShowTime
         <br/>
         Movieinfo<br/>
          {movie.title} <br/>{movie.description} <br/>
+        <hr/>
+        location info<br/>
+        {location.name}<br/>
+        {location.notifs}
         <hr/>
         Showtime info<br/> {showtime.time}<br/>
 
@@ -73,5 +77,22 @@ return <div>ShowTime
 
         <button onClick={(e)=>{purchase(e)}}>check out</button>
         </form>
+    </div>
+```
+
+# movies: all and by multiplex
+```
+    return <div>
+        Multiplex <select id="multiplex" onChange={setAll}>
+            <option>All</option>
+            {multiplexes.map((ele)=><option>{ele.name}</option>)}
+        </select>
+
+        {movies.map(
+            (movie)=><div>
+                {movie.title}<br/>
+                {movie.showtimes.map((stid) => <a href={`/showtime/${stid}`}>{getShowtimeTime(stid)}</a>)}
+            </div>
+        )}
     </div>
 ```
