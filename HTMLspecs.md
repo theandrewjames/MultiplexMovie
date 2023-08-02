@@ -45,7 +45,7 @@
 return <div>ShowTime
         <br/>
         Movieinfo<br/>
-         {movie.title} <br/>{movie.description} <br/><a href={`/movie/${movie.id}`}>Movie link</a>
+         {movie.title} <br/>{movie.description} <br/>
         <hr/>
         Showtime info<br/> {showtime.time}<br/>
 
